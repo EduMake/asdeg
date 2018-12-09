@@ -194,6 +194,7 @@ class MainWindow(Frame):
 
 
 root = Tk()
+root.minsize(500,400)
 main_window = MainWindow(master=root)
 main_window.mainloop()
 # root.destroy()
