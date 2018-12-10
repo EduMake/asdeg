@@ -22,9 +22,9 @@ from Path import Path, crow_flies_down
 
 class Node:
 
-    def __init__(self, name, _id, x, y, z, heuristic=None, final_destination: 'Node'=None):
+    def __init__(self, name, node_id, x, y, z, heuristic=None, final_destination: 'Node'=None):
         self._name = name
-        self._id = _id
+        self._id = node_id
         self._x = x
         self._y = y
         self._z = z
@@ -35,6 +35,8 @@ class Node:
                 self._heuristic = 0
             else:
                 self._heuristic = crow_flies_down(self, final_destination)
+        else:
+            self._heuristic = heuristic
 
     @property
     def id(self):
