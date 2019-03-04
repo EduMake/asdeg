@@ -15,12 +15,14 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with ASDEG.  If not, see <https://www.gnu.org/licenses/>.
+from pkg_resources import file_ns_handler
 
 from RandomGraph import *
-from GraphCanvas import *
 from SolutionGrid import *
+from ProblemDialog import *
 from random import seed
-
+from tkinter import filedialog
+import pickle
 
 class MainWindow(Frame):
     def __init__(self, master=None):
@@ -30,9 +32,15 @@ class MainWindow(Frame):
 
         self.controls_frame = None
         self.seed_entry_frame = None
+        self.num_nodes_label = None
+        self.num_nodes_entry = None
+        self.input_button = None
+        self.edit_button = None
         self.seed_label = None
         self.seed_entry = None
         self.generate_button = None
+        self.save_button = None
+        self.load_button = None
         self.next_button = None
         self.solution_control_frame = None
         self.solution_label = None
@@ -48,6 +56,8 @@ class MainWindow(Frame):
         self.separator = None
         self.solution_grid = None
 
+        self.num_nodes_var = IntVar()
+        self.num_nodes_var.set(8)
         self.seed_var = IntVar()
         self.seed_var.set(6)
         seed(self.seed_var.get())
@@ -56,6 +66,14 @@ class MainWindow(Frame):
         self.dijkstra_graph_canvas.draw(self.graph)
         self.a_star_graph_canvas.draw(self.graph)
         self.bind('<Configure>', self.frame_changed)
+
+    def do_undraw(self):
+        self.dijkstra_graph_canvas.undraw()
+        self.a_star_graph_canvas.undraw()
+
+    def do_draw(self):
+        self.dijkstra_graph_canvas.draw(self.graph)
+        self.a_star_graph_canvas.draw(self.graph)
 
     def do(self):
         self.dijkstra_graph_canvas.undraw()
@@ -69,6 +87,41 @@ class MainWindow(Frame):
     def do_next(self):
         self.seed_var.set(self.seed_var.get() + 1)
         self.do()
+
+    def do_load(self):
+        fname = filedialog.askopenfilename(filetypes = (("ASDEG files", "*.asdeg"),))
+        if not fname is None:
+            filehandler = open(fname, 'rb')
+            self.do_undraw()
+            self.graph = pickle.load(filehandler)
+            filehandler.close()
+            self.solution_grid.graph = self.graph
+            self.do_draw()
+
+    def do_save(self):
+        fname = filedialog.asksaveasfilename(filetypes = (("ASDEG files", "*.asdeg"),))
+        if not fname is None:
+            filehandler = open(fname, 'wb')
+            pickle.dump(self.graph, filehandler)
+            filehandler.close()
+
+    def do_input(self):
+        try:
+            val = self.num_nodes_var.get()
+        except:
+            val = None
+        if val != None:
+            dlg = ProblemDialog(master=self, num_nodes = val, include_heuristics = True)
+
+    def do_edit(self):
+        dlg = ProblemDialog(master=self, existing_graph = self.graph, include_heuristics = True)
+        if dlg.result:
+            self.dijkstra_graph_canvas.undraw()
+            self.a_star_graph_canvas.undraw()
+            self.graph = dlg.result
+            self.solution_grid.graph = self.graph
+            self.dijkstra_graph_canvas.draw(self.graph)
+            self.a_star_graph_canvas.draw(self.graph)
 
     def do_generate(self):
         self.seed_entry.update()
@@ -135,15 +188,27 @@ class MainWindow(Frame):
 
         self.seed_entry_frame = Frame(self.controls_frame)
         self.seed_entry_frame.pack(side=LEFT, anchor=W)
+        self.num_nodes_label = Label(self.seed_entry_frame, text="# of nodes:")
+        self.num_nodes_label.pack(side=LEFT)
+        self.num_nodes_entry = Entry(self.seed_entry_frame, textvariable=self.num_nodes_var, justify = RIGHT)
+        self.num_nodes_entry.pack(side=LEFT)
+        self.input_button = Button(self.seed_entry_frame, command=self.do_input, text="Input")
+        self.input_button.pack(side=LEFT)
+        self.edit_button = Button(self.seed_entry_frame, command=self.do_edit, text="Edit")
+        self.edit_button.pack(side=LEFT)
         self.seed_label = Label(self.seed_entry_frame, text="Seed:")
         self.seed_label.pack(side=LEFT)
-        self.seed_entry = Entry(self.seed_entry_frame, textvariable=self.seed_var)
+        self.seed_entry = Entry(self.seed_entry_frame, textvariable=self.seed_var, justify = RIGHT)
         self.seed_entry.pack(side=LEFT)
         self.seed_entry.update()
         self.generate_button = Button(self.seed_entry_frame, command=self.do_generate, text="Generate")
         self.generate_button.pack(side=LEFT)
         self.next_button = Button(self.seed_entry_frame, command=self.do_next, text="Next")
         self.next_button.pack(side=LEFT)
+        self.load_button = Button(self.seed_entry_frame, command=self.do_load, text="Load")
+        self.load_button.pack(side=LEFT)
+        self.save_button = Button(self.seed_entry_frame, command=self.do_save, text="Save")
+        self.save_button.pack(side=LEFT)
 
         self.solution_control_frame = Frame(self.controls_frame)
         self.solution_control_frame.pack(side=LEFT, anchor=E, pady=4)

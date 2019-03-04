@@ -21,10 +21,14 @@ from tkinter import *
 
 class TableGrid(Frame):
 
-    def __init__(self, master: Frame, grid_color, back_color):
+    def __init__(self, master: Frame, grid_color, back_color, empty_color=None):
         super().__init__(master, bg=grid_color)
         self._grid_color = grid_color
         self._back_color = back_color
+        if empty_color==None:
+            self._empty_color = back_color
+        else:
+            self._empty_color = empty_color
         self.columns = 0
         self.rows = 0
 
@@ -33,28 +37,30 @@ class TableGrid(Frame):
             for c in range(self.columns, new_columns):
                 for r in range(0, self.rows):
                     if not (ex_column <= c < ex_column + ex_column_span and ex_row <= r < ex_row + ex_row_span):
-                        f = Frame(self, bg=self._back_color)
+                        f = Frame(self, bg=self._empty_color)
                         f.grid(column=c, row=r, padx=1, pady=1, sticky="nsew")
             self.columns = new_columns
         if self.rows < new_rows:
             for r in range(self.rows, new_rows):
                 for c in range(0, self.columns):
                     if not (ex_column <= c < ex_column + ex_column_span and ex_row <= r < ex_row + ex_row_span):
-                        f = Frame(self, bg=self._back_color)
+                        f = Frame(self, bg=self._empty_color)
                         f.grid(column=c, row=r, padx=1, pady=1, sticky="nsew")
             self.rows = new_rows
 
-    def cell(self, row, column, row_span=1, column_span=1):
+    def set_child(self, new_child, row, column, row_span=1, column_span=1):
         for r in range(row, min(self.rows, row + row_span)):
             for c in range(column, min(self.columns, column + column_span)):
                 for child in self.grid_slaves(row=r, column=c):
                     child.grid_remove()
                     child.destroy()
         self.extend_to(new_rows=row + row_span, new_columns=column + column_span, ex_row=row, ex_column=column, ex_row_span=row_span, ex_column_span=column_span)
-        f = Frame(self, bg=self._back_color)
-        f.grid(column=column, row=row, rowspan=row_span, columnspan=column_span, padx=1, pady=1, sticky="nsew")
+        new_child.grid(column=column, row=row, rowspan=row_span, columnspan=column_span, padx=1, pady=1, sticky="nsew")
         self.grid_columnconfigure(column, weight=1)
-        return f
+        return new_child
+
+    def cell(self, row, column, row_span=1, column_span=1):
+        return self.set_child(Frame(self, bg=self._back_color), row, column, row_span, column_span)
 
     def set_row_text(self, row, start_column, text, column_span=1, row_span=1, font=('Sans Serif', 11, ""), text_color=None, anchor='n'):
         if not text_color:

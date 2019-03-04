@@ -24,7 +24,7 @@ class Solution:
     def __init__(self, graph: Graph, start, end, use_heuristics: bool):
         self._graph = graph
         self._use_heuristics = use_heuristics
-        self._solution_nodes = list(range(len(graph.nodes)))
+        self._all_nodes = list(range(len(graph.nodes)))
         for n in graph.nodes:
             sn = SolutionNode(n)
             if isinstance(start, int):
@@ -45,7 +45,7 @@ class Solution:
             elif isinstance(end, Node):
                 if n == end:
                     self._end = sn
-            self._solution_nodes[n.id] = sn
+            self._all_nodes[n.id] = sn
         self._start.mark_as_start()
         self._open_nodes = [self._start]
         self._solved = False
@@ -62,12 +62,16 @@ class Solution:
         return self._use_heuristics
 
     @property
-    def solution_nodes(self) -> List[SolutionNode]:
-        return self._solution_nodes
+    def all_nodes(self) -> List[SolutionNode]:
+        return self._all_nodes
 
     @property
     def open_nodes(self) -> List[SolutionNode]:
         return self._open_nodes
+
+    @property
+    def route_nodes(self) -> List[SolutionNode]:
+        return self._route_nodes
 
     @property
     def solved(self) -> bool:
@@ -107,12 +111,12 @@ class Solution:
         return self._solved
 
     def calc_next(self):
-        for sn in self._solution_nodes:
+        for sn in self._all_nodes:
             sn.reset()
         curr_node = self._current.node
         base = self._current.total_path_distance
         for p in curr_node.out_paths:
-            next_sn = self._solution_nodes[p.end.id]
+            next_sn = self._all_nodes[p.end.id]
             if next_sn.status != "X":
                 d = base + p.distance
                 if d < next_sn.total_path_distance:

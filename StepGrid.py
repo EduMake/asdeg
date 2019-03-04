@@ -53,7 +53,7 @@ class StepGrid(TableGrid):
             self.set_row_text(0, 0, ["Dijkstra's"], 5)
             self.set_row_text(1, 0, ["Iter.", "Node", "PD", "Prev", "Status"])
         row = 2
-        for sn in self._solution.solution_nodes:
+        for sn in self._solution.all_nodes:
             column = 1
             if sn.old:
                 self.set_row_text(row, column, sn.node.name, row_span=2, anchor='center')
@@ -75,9 +75,19 @@ class StepGrid(TableGrid):
                 column += 2
             self.set_row_text(row, column, [self.format_solution_node_name(sn.prev)])
             column += 1
-            if sn.old:
-                self.set_row_text(row - 1, column, [sn.status], row_span=2, anchor='center')
+
+            if sn.status == "*":
+                t = "X"
+                f = ('Sans Serif', 11, 'overstrike')
             else:
-                self.set_row_text(row, column, [sn.status])
+                t = sn.status
+                f = ('Sans Serif', 11)
+            if sn.old:
+                self.set_row_text(row - 1, column, [t], font=f, row_span=2, anchor='center')
+            else:
+                self.set_row_text(row, column, [t], font=f)
             row += 1
+        if self._solution.solved:
+            sol = " -> ".join(n.node.name for n in reversed(self._solution.route_nodes))
+            self.set_row_text(row=row, start_column=0, text=[sol], column_span= 7 if self._solution.use_heuristics else 5)
         self.set_row_text(row=2, start_column=0, text=[str(self._iteration)], row_span=row - 2, anchor='n')

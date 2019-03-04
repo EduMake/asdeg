@@ -43,5 +43,6 @@ class GraphCanvas(ScaledCanvas):
         self._graph_graphic.draw(self, solution)
 
     def undraw(self):
-        self._graph_graphic.undraw(self)
-        self._graph_graphic = None
+        if self._graph_graphic:
+            self._graph_graphic.undraw(self)
+            self._graph_graphic = None

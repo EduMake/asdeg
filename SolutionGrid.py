@@ -91,9 +91,9 @@ class SolutionGrid(ScrollableFrame):
         self._dijkstra_solved_at = -1
         self._a_star_solved_at = -1
         if self._dijkstra_enabled:
-            self._dijkstra_solution = Solution(graph, graph.origin, graph.destination, False)
+            self._dijkstra_solution = Solution(graph, graph.origin_node, graph.destination_node, False)
         if self._a_star_enabled:
-            self._a_star_solution = Solution(graph, graph.origin, graph.destination, True)
+            self._a_star_solution = Solution(graph, graph.origin_node, graph.destination_node, True)
 
     @property
     def dijkstra_enabled(self) -> bool:

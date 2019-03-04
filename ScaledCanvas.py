@@ -20,8 +20,8 @@ from tkinter import *
 
 
 class ScaledCanvas(Canvas):
-    DEFAULT_HEIGHT = 368
-    DEFAULT_WIDTH = 512
+    DEFAULT_HEIGHT = 200
+    DEFAULT_WIDTH = 200
 
     def __init__(self, master: Frame=None, cnf=None, **kw):
         kw['height'] = ScaledCanvas.DEFAULT_HEIGHT

@@ -22,17 +22,34 @@ from Node import *
 class Graph:
     def __init__(self):
         self._nodes = []
-        self._origin = None
-        self._destination = None
+        self._origin_id = None
+        self._destination_id = None
 
     @property
     def nodes(self) -> List[Node]:
         return self._nodes
 
     @property
-    def origin(self) -> Node:
-        return self._origin
+    def origin_node(self) -> Node:
+        return None if self._origin_id is None else self._nodes[self._origin_id]
 
     @property
-    def destination(self) -> Node:
-        return self._destination
+    def origin_id(self) -> int:
+        return self._origin_id
+
+    @origin_id.setter
+    def origin_id(self, new_origin_id : int) :
+        self._origin_id = new_origin_id
+
+    @property
+    def destination_node(self) -> Node:
+        return None if self._destination_id is None else self._nodes[self._destination_id]
+
+    @property
+    def destination_id(self) -> Node:
+        return self._destination_id
+
+    @destination_id.setter
+    def destination_id(self, new_destination_id : int) :
+        self._destination_id = new_destination_id
+

@@ -31,7 +31,7 @@ class GraphGraphic:
         for ng in self._node_graphics.values():
             canvas.expand_range(ng.node.x, ng.node.y, 20)
         if solution:
-            for sn in solution.solution_nodes:
+            for sn in solution.all_nodes:
                 ng = self._node_graphics[sn.node.id]
                 if sn.status == '/':
                     ng.mark('magenta')
@@ -44,8 +44,8 @@ class GraphGraphic:
                 elif sn.status == 'X':
                     ng.mark('darkblue')
                 for pg in ng.path_graphics:
-                    start_sn = solution.solution_nodes[pg.path.start.id]
-                    end_sn = solution.solution_nodes[pg.path.end.id]
+                    start_sn = solution.all_nodes[pg.path.start.id]
+                    end_sn = solution.all_nodes[pg.path.end.id]
                     if start_sn.status == '*' and end_sn.status == '*' and \
                             (start_sn.prev and start_sn.prev.node.id == end_sn.node.id or
                                 end_sn.prev and end_sn.prev.node.id == start_sn.node.id):

@@ -62,19 +62,9 @@ class RandomGraph(Graph):
                 for n2 in sample(temp, pop):
                     assert n2 != n and (n2.x != n.x or n2.y != n.y)
                     all_paths.append(n.link_from_to(n2)[0])
+        print("paths:" + str(len(all_paths)))
         for p in all_paths:
             print(p.start.name + ":" + p.end.name + ":" + str(p.distance))
-        self._origin = origin_node
-        self._destination = destination_node
+        self._origin_id = origin_node.id
+        self._destination_id = destination_node.id
 
-    @property
-    def nodes(self) -> List[Node]:
-        return self._nodes
-
-    @property
-    def origin(self):
-        return self._origin
-
-    @property
-    def destination(self):
-        return self._destination
