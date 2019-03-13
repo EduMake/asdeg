@@ -88,6 +88,6 @@ class StepGrid(TableGrid):
                 self.set_row_text(row, column, [t], font=f)
             row += 1
         if self._solution.solved:
-            sol = " -> ".join(n.node.name for n in reversed(self._solution.route_nodes))
+            sol = " -> ".join(n.node.name for n in reversed(self._solution.route_nodes_reversed))
             self.set_row_text(row=row, start_column=0, text=[sol], column_span= 7 if self._solution.use_heuristics else 5)
         self.set_row_text(row=2, start_column=0, text=[str(self._iteration)], row_span=row - 2, anchor='n')

@@ -50,7 +50,7 @@ class GraphGraphic:
                             (start_sn.prev and start_sn.prev.node.id == end_sn.node.id or
                                 end_sn.prev and end_sn.prev.node.id == start_sn.node.id):
                         pg.mark('green')
-                    elif start_sn.status == '/':
+                    elif start_sn.status == '/' and solution.state == SolutionState.OPENS_CALCED:
                         pg.mark('magenta')
 
             for ng in self._node_graphics.values():

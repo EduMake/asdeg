@@ -63,9 +63,11 @@ class MainWindow(Frame):
         seed(self.seed_var.get())
         self.create_widgets()
         self.graph = RandomGraph()
+        self.chooseCurrentNext = True
         self.dijkstra_graph_canvas.draw(self.graph)
         self.a_star_graph_canvas.draw(self.graph)
         self.bind('<Configure>', self.frame_changed)
+        self.solution_grid.graph = self.graph
 
     def do_undraw(self):
         self.dijkstra_graph_canvas.undraw()
@@ -99,7 +101,7 @@ class MainWindow(Frame):
             self.do_draw()
 
     def do_save(self):
-        fname = filedialog.asksaveasfilename(filetypes = (("ASDEG files", "*.asdeg"),))
+        fname = filedialog.asksaveasfilename(defaultextension=".asdeg", filetypes = (("ASDEG files", "*.asdeg"),))
         if not fname is None:
             filehandler = open(fname, 'wb')
             pickle.dump(self.graph, filehandler)
@@ -112,6 +114,13 @@ class MainWindow(Frame):
             val = None
         if val != None:
             dlg = ProblemDialog(master=self, num_nodes = val, include_heuristics = True)
+            if dlg.result:
+                self.dijkstra_graph_canvas.undraw()
+                self.a_star_graph_canvas.undraw()
+                self.graph = dlg.result
+                self.solution_grid.graph = self.graph
+                self.dijkstra_graph_canvas.draw(self.graph)
+                self.a_star_graph_canvas.draw(self.graph)
 
     def do_edit(self):
         dlg = ProblemDialog(master=self, existing_graph = self.graph, include_heuristics = True)
@@ -148,38 +157,27 @@ class MainWindow(Frame):
         return
 
     def solve_step(self):
-        if self.solution_grid.graph is None:
-            self.solution_grid.graph = self.graph
-        do_dijkstra = self.solution_grid.dijkstra_enabled
-        do_a_star = self.solution_grid.a_star_enabled
-        dijkstra_in_progress = do_dijkstra and not self.solution_grid.dijkstra_solution.solved
-        a_star_in_progress = do_a_star and not self.solution_grid.a_star_solution.solved
-        if self.solution_grid.iteration == 0:
+        do_dijkstra = not self.solution_grid.dijkstra_grid is None
+        do_a_star = not self.solution_grid.a_star_grid is None
+        dijkstra_in_progress = do_dijkstra and not self.solution_grid.dijkstra_grid.solution.solved
+        a_star_in_progress = do_a_star and not self.solution_grid.a_star_grid.solution.solved
+        stepping = dijkstra_in_progress or a_star_in_progress
+        if stepping:
+            self.solution_grid.pre_step()
+        if dijkstra_in_progress:
+            dijkstra_in_progress = dijkstra_in_progress and not self.solution_grid.dijkstra_grid.solution.single_step()
+            self.solution_grid.dijkstra_grid.output_step()
             self.dijkstra_graph_canvas.undraw()
-            self.dijkstra_graph_canvas.draw(self.graph, self.solution_grid.dijkstra_solution)
+            self.dijkstra_graph_canvas.draw(self.graph, self.solution_grid.dijkstra_grid.solution)
+        if a_star_in_progress:
+            a_star_in_progress = a_star_in_progress and not self.solution_grid.a_star_grid.solution.single_step()
+            self.solution_grid.a_star_grid.output_step()
             self.a_star_graph_canvas.undraw()
-            self.a_star_graph_canvas.draw(self.graph, self.solution_grid.a_star_solution)
-            self.solution_grid.output_step()
-            return True
-        else:
-            if a_star_in_progress or dijkstra_in_progress:
-                ret_val = False
-                if dijkstra_in_progress:
-                    if not self.solution_grid.dijkstra_solution.find_new_current():
-                        self.solution_grid.dijkstra_solution.calc_next()
-                        ret_val = True
-                if a_star_in_progress:
-                    if not self.solution_grid.a_star_solution.find_new_current():
-                        self.solution_grid.a_star_solution.calc_next()
-                        ret_val = True
-                self.dijkstra_graph_canvas.undraw()
-                self.dijkstra_graph_canvas.draw(self.graph, self.solution_grid.dijkstra_solution)
-                self.a_star_graph_canvas.undraw()
-                self.a_star_graph_canvas.draw(self.graph, self.solution_grid.a_star_solution)
-                self.solution_grid.output_step()
-                return ret_val
-            else:
-                return False
+            self.a_star_graph_canvas.draw(self.graph, self.solution_grid.a_star_grid.solution)
+        if stepping:
+            self.solution_grid.post_step()
+
+        return dijkstra_in_progress or a_star_in_progress
 
     def create_widgets(self):
         self.master.register(self.validate), '%d', '%i', '%P', '%s', '%S', '%v', '%V', '%W'
@@ -252,10 +250,10 @@ class MainWindow(Frame):
         self.update_idletasks()
         if self.dijkstra_graph_canvas:
             self.dijkstra_graph_canvas.undraw()
-            self.dijkstra_graph_canvas.draw(self.graph, self.solution_grid.dijkstra_solution)
+            self.dijkstra_graph_canvas.draw(self.graph, self.solution_grid.dijkstra_grid.solution)
         if self.a_star_graph_canvas:
             self.a_star_graph_canvas.undraw()
-            self.a_star_graph_canvas.draw(self.graph, self.solution_grid.a_star_solution)
+            self.a_star_graph_canvas.draw(self.graph, self.solution_grid.a_star_grid.solution)
 
 
 root = Tk()

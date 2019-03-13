@@ -20,11 +20,11 @@ from setuptools import setup
 
 setup(
     name='asdeg',
-    version='0.9',
+    version='0.92',
     packages=[''],
     url='',
     license='GPLv3',
     author='sgparry',
     author_email='stephen@edumake.org',
-    description='Generates and solves randome Dijkstra / A* problems'
+    description='Generates and solves random Dijkstra / A* problems'
 )
