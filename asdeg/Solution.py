@@ -17,8 +17,8 @@
 # along with ASDEG.  If not, see <https://www.gnu.org/licenses/>.
 import enum
 
-from SolutionNode import *
-from Graph import *
+from asdeg.SolutionNode import *
+from asdeg.Graph import *
 
 class SolutionState(enum.Enum) :
     EMPTY = 0

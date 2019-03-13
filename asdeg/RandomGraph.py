@@ -16,10 +16,10 @@
 # You should have received a copy of the GNU General Public License
 # along with ASDEG.  If not, see <https://www.gnu.org/licenses/>.
 
-from Graph import *
-from intersection import *
+from asdeg.Graph import *
+from asdeg.intersection import *
 from random import *
-from Node import *
+from asdeg.Node import *
 
 
 class RandomGraph(Graph):

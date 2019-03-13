@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e884df92-8b89-4bdc-a1ac-e6bf6715bb84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SolutionSubGrid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.directory" beforeDir="false" afterPath="$PROJECT_DIR$/.directory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asdeg/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.directory" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphGraphic.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphGraphic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/Solution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolutionGrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolutionGrid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StepGrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/StepGrid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoScrollbar.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/AutoScrollbar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COPYING" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/COPYING" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/Graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphCanvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/GraphCanvas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphGraphic.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/GraphGraphic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputtedGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/InputtedGraph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Node.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/Node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NodeGraphic.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/NodeGraphic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Path.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/Path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PathGraphic.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/PathGraphic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProblemDialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/ProblemDialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProblemFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/ProblemFrame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProblemGrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/ProblemGrid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/RandomGraph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScaledCanvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/ScaledCanvas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScrollableFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/ScrollableFrame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/Solution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolutionGrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/SolutionGrid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolutionNode.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/SolutionNode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolutionSubGrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/SolutionSubGrid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StepGrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/StepGrid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TableGrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/TableGrid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intersection.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/intersection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/asdeg/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
@@ -20,79 +39,61 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-217777133">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="29" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="29" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SolutionGrid.py">
+        <entry file="file://$PROJECT_DIR$/asdeg/Graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
-              <folding>
-                <element signature="e#786#808#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="279">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TableGrid.py">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="21" column="9" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="15" />
+            <state relative-caret-position="169">
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
+        <entry file="file://$PROJECT_DIR$/asdeg/AutoScrollbar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="84" column="45" lean-forward="true" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
-              <folding>
-                <element signature="e#785#826#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Solution.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1033">
-              <caret line="107" selection-start-line="107" selection-end-line="107" />
-              <folding>
-                <element signature="e#785#796#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GraphGraphic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SolutionSubGrid.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
-              <folding>
-                <element signature="e#785#804#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graph.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="386">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -157,13 +158,14 @@
         <option value="$PROJECT_DIR$/ScaledCanvas.py" />
         <option value="$PROJECT_DIR$/ProblemGrid.py" />
         <option value="$PROJECT_DIR$/StepGrid.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/SolutionGridGraphPair.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Solution.py" />
         <option value="$PROJECT_DIR$/SolutionGrid.py" />
         <option value="$PROJECT_DIR$/SolutionSubGrid.py" />
         <option value="$PROJECT_DIR$/GraphGraphic.py" />
+        <option value="$PROJECT_DIR$/asdeg/setup.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -188,6 +190,16 @@
             </path>
             <path>
               <item name="asdeg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asdeg" type="462c0819:PsiDirectoryNode" />
+              <item name="asdeg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asdeg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asdeg" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asdeg" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -198,8 +210,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/asdeg" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sparry\ownCloud\development\PycharmProjects\asdeg" />
+      <recent name="C:\Users\sparry\ownCloud\development\PycharmProjects\asdeg\asdeg" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -226,7 +244,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\sparry\ownCloud\development\PycharmProjects\asdeg\asdeg\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -245,13 +263,13 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1012" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37058514" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36963433" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32692307" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34049773" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32692307" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3401109" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3970588" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -265,36 +283,40 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2498671" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3703125" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3271605" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3425926" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39814815" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32692307" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34049773" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3970588" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32988167" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32918552" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32988167" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32918552" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ensure that the window has a sensible minimum size" />
     <MESSAGE value="Changed problematic param name." />
     <MESSAGE value="Added rudimentary editing support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added rudimentary editing support" />
+    <MESSAGE value="- Fixed some bugs in editing support preventing new problems being created&#10;- Refactored code for SolutionGrid to separate Dijkstra and A* code&#10;- Made the solution steps finer grained" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed some bugs in editing support preventing new problems being created&#10;- Refactored code for SolutionGrid to separate Dijkstra and A* code&#10;- Made the solution steps finer grained" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Solution.py</url>
-          <line>107</line>
+          <url>file://$PROJECT_DIR$/asdeg/Solution.py</url>
+          <line>137</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
@@ -330,21 +352,21 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/intersection.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/intersection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PathGraphic.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/PathGraphic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/COPYING">
+    <entry file="file://$PROJECT_DIR$/asdeg/COPYING">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9765">
           <caret line="651" column="38" selection-start-line="651" selection-start-column="38" selection-end-line="651" selection-end-column="38" />
@@ -352,14 +374,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IntegerEntry.py" />
-    <entry file="file://$PROJECT_DIR$/ScrollableFrame.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/ScrollableFrame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Path.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/Path.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="18" selection-start-line="18" selection-end-line="18" />
@@ -367,42 +389,35 @@
       </provider>
     </entry>
     <entry file="file:///usr/lib/python3.5/tkinter/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/AutoScrollbar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Node.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/Node.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RandomGraph.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/RandomGraph.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="68" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NodeGraphic.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/NodeGraphic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GraphCanvas.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/GraphCanvas.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProblemFrame.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/ProblemFrame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
@@ -412,92 +427,52 @@
     <entry file="file:///usr/lib/python3.6/tkinter/simpledialog.py" />
     <entry file="file://$PROJECT_DIR$/AngleEntry.py" />
     <entry file="file:///usr/lib/python3.6/tkinter/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ScaledCanvas.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/ScaledCanvas.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/InputtedGraph.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/InputtedGraph.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2376">
           <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StepGrid.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/StepGrid.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2673">
           <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProblemDialog.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/ProblemDialog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProblemGrid.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/ProblemGrid.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1169">
           <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SolutionNode.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/SolutionNode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SolutionGridGraphPair.py">
+    <entry file="file://$PROJECT_DIR$/SolutionGridGraphPair.py" />
+    <entry file="file://$PROJECT_DIR$/asdeg/SolutionGrid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Solution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1033">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-          <folding>
-            <element signature="e#785#796#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="84" column="45" lean-forward="true" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
-          <folding>
-            <element signature="e#785#826#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolutionGrid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
+        <state relative-caret-position="2508">
           <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#786#808#0" expanded="true" />
@@ -505,9 +480,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SolutionSubGrid.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/TableGrid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="693">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asdeg/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2772">
+          <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+          <folding>
+            <element signature="e#785#826#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asdeg/Solution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3498">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asdeg/GraphGraphic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asdeg/SolutionSubGrid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1518">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#785#804#0" expanded="true" />
@@ -515,17 +521,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GraphGraphic.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/Graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="279">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TableGrid.py">
+    <entry file="file://$PROJECT_DIR$/asdeg/AutoScrollbar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="15" />
+        <state relative-caret-position="386">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
         </state>
       </provider>
     </entry>

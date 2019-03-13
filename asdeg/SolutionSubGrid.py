@@ -15,11 +15,9 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with ASDEG.  If not, see <https://www.gnu.org/licenses/>.
-import SolutionGrid
-from Solution import *
-from ScrollableFrame import *
-from StepGrid import StepGrid
-from TableGrid import *
+from asdeg import SolutionGrid
+from asdeg.Solution import *
+from asdeg.StepGrid import StepGrid
 
 
 class SolutionSubGrid:

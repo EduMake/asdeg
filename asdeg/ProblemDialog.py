@@ -1,7 +1,6 @@
-from tkinter import *
 from tkinter.simpledialog import *
-from ProblemFrame import *
-from Graph import *
+from asdeg.ProblemFrame import *
+from asdeg.Graph import *
 
 class ProblemDialog(Dialog) :
     def __init__(self, master, num_nodes : int = None, existing_graph: Graph = None, include_heuristics : bool = True):

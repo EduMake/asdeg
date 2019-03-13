@@ -1,6 +1,6 @@
-from ScrollableFrame import *
-from ProblemGrid import *
-from GraphCanvas import *
+from asdeg.ScrollableFrame import *
+from asdeg.ProblemGrid import *
+from asdeg.GraphCanvas import *
 
 class ProblemFrame(ScrollableFrame):
     def __init__(self, master: Frame, num_nodes: int = None, existing_graph: Graph = None, include_heuristics: bool = True, change_callback = None):

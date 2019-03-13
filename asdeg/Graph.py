@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with ASDEG.  If not, see <https://www.gnu.org/licenses/>.
 
-from Node import *
+from asdeg.Node import *
 
 
 class Graph:

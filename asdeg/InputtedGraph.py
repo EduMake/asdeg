@@ -1,4 +1,4 @@
-from Graph import *
+from asdeg.Graph import *
 from tkinter import *
 from math import sqrt
 class InputtedGraph:

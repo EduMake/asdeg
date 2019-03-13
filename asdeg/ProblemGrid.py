@@ -1,6 +1,5 @@
-from TableGrid import *
-from Graph import *
-from InputtedGraph import *
+from asdeg.TableGrid import *
+from asdeg.InputtedGraph import *
 
 class ProblemGrid(TableGrid) :
     def __init__(self, master: Frame, num_nodes: int = None, existing_graph: Graph = None, include_heuristics: bool = True, change_callback=None):

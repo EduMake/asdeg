@@ -16,11 +16,9 @@
 # You should have received a copy of the GNU General Public License
 # along with ASDEG.  If not, see <https://www.gnu.org/licenses/>.
 
-from Solution import *
-from ScrollableFrame import *
-from StepGrid import StepGrid
-from TableGrid import *
-from SolutionSubGrid import *
+from asdeg.ScrollableFrame import *
+from asdeg.TableGrid import *
+from asdeg.SolutionSubGrid import *
 
 class SolutionGrid(ScrollableFrame):
     def __init__(self, master: Frame, include_dijkstra: bool=None, include_a_star: bool =None):

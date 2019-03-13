@@ -16,8 +16,8 @@
 # You should have received a copy of the GNU General Public License
 # along with ASDEG.  If not, see <https://www.gnu.org/licenses/>.
 
-from Solution import *
-from NodeGraphic import *
+from asdeg.Solution import *
+from asdeg.NodeGraphic import *
 
 
 class GraphGraphic:

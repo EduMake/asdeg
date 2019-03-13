@@ -16,9 +16,9 @@
 # You should have received a copy of the GNU General Public License
 # along with ASDEG.  If not, see <https://www.gnu.org/licenses/>.
 
-from GraphGraphic import *
-from Solution import *
-from Graph import *
+from asdeg.GraphGraphic import *
+from asdeg.Solution import *
+from asdeg.Graph import *
 from tkinter import *
 
 

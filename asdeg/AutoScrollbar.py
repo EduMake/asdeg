@@ -16,15 +16,24 @@
 # You should have received a copy of the GNU General Public License
 # along with ASDEG.  If not, see <https://www.gnu.org/licenses/>.
 
-from setuptools import setup
+# This module adapted from original code by Fredrik Lundh
 
-setup(
-    name='asdeg',
-    version='1.1',
-    packages=['asdeg'],
-    url='',
-    license='GPLv3',
-    author='sgparry',
-    author_email='stephen@edumake.org',
-    description='Generates and solves random Dijkstra / A* problems'
-)
+from tkinter import Scrollbar, TclError
+
+
+class AutoScrollbar(Scrollbar):
+    # A scrollbar that hides itself if it's not needed.
+    # Only works if you use the grid geometry manager!
+    def set(self, lo, hi):
+        if float(lo) <= 0.0 and float(hi) >= 1.0:
+            # grid_remove is currently missing from Tkinter!
+            self.tk.call("grid", "remove", self)
+        else:
+            self.grid()
+        Scrollbar.set(self, lo, hi)
+
+    def pack(self, **kw):
+        raise TclError("cannot use pack with this widget")
+
+    def place(self, **kw):
+        raise TclError("cannot use place with this widget")

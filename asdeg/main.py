@@ -15,11 +15,10 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with ASDEG.  If not, see <https://www.gnu.org/licenses/>.
-from pkg_resources import file_ns_handler
 
-from RandomGraph import *
-from SolutionGrid import *
-from ProblemDialog import *
+from asdeg.RandomGraph import *
+from asdeg.SolutionGrid import *
+from asdeg.ProblemDialog import *
 from random import seed
 from tkinter import filedialog
 import pickle
